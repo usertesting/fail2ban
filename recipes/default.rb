@@ -58,3 +58,5 @@ service 'fail2ban' do
     status_command "/etc/init.d/fail2ban status | grep -q 'is running'"
   end
 end
+
+include_recipe "fail2ban::sshd_filter"
